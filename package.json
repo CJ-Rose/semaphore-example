@@ -29,6 +29,7 @@
     "typechain": "^8.1.0"
   },
   "dependencies": {
-    "@semaphore-protocol/contracts": "^2.0.0"
+    "@semaphore-protocol/contracts": "^2.0.0",
+    "nvm": "^0.0.4"
   }
 }

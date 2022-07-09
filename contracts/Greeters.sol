@@ -1,8 +1,8 @@
 //SPDX-License-Identifier: MIT
 pragma solidity ^0.8.0;
 
-import "semaphore-protocol/contracts/interfaces/IVerifier.sol";
-import "semaphore-protocol/contracts/base/SemaphoreCore.sol";
+import "@semaphore-protocol/contracts/interfaces/IVerifier.sol";
+import "@semaphore-protocol/contracts/base/SemaphoreCore.sol";
 
 contract Greeters is SemaphoreCore {
     event NewGreeting(bytes32 greeting);
@@ -11,7 +11,7 @@ contract Greeters is SemaphoreCore {
 
     constructor(uint256 _greeters, address _verifier) {
         greeters = _greeters;
-        verifier = _verifier;
+        verifier = IVerifier(_verifier);
     }
 
     function greet(

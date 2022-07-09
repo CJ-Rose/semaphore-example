@@ -18,7 +18,7 @@ describe("Greeters", function () {
     const wasmFilePath = "./static/semaphore.wasm"
     const zkeyFilePath = "./static/semaphore.zkey"
 
-    it("Should greet", () => {
+    it("Should greet", async () => {
       const greeting = "Hello world"
       const bytes32Greeting = ethers.utils.formatBytes32String(greeting)
       const message = await signers[0].signMessage("Sign this message to create your identity.")
